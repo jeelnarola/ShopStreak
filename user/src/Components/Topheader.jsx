@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import SubHeader from './SubHeader';
+import Header from './Header';
+// import logo from '../assets/SHOPSTREA K (2).png'; // Adjust the path as necessary
 export default function Topheader() {
     const [isQuickLinksOpen, setQuickLinksOpen] = useState(false);
     const [isMdScreen, setIsMdScreen] = useState(false);
@@ -20,9 +22,9 @@ export default function Topheader() {
 
     return (
         <div className="">
-            <div className='container mx-auto py-2'>
+            <div className='container mx-auto py-2 '>
                 <div className='flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center'>
-                    <div className='text-md text-gray-500 lg:visible invisible text-center mb-2 lg:mb-0'>
+                    <div className='text-md  text-gray-500 lg:visible invisible text-center mb-2 lg:mb-0'>
                         Get up to 50% off new season styles, limited time only
                     </div>
                     <ul className='flex flex-wrap justify-center items-center gap-x-4 text-sm text-gray-500 relative'>
@@ -53,6 +55,11 @@ export default function Topheader() {
                 </div>
             </div>
             <hr className='text-gray-300' />
+            <SubHeader/>
+            <hr className='text-gray-300' />
+            <Header />
+            <hr className='text-gray-300' />
+
         </div>
     );
 }
