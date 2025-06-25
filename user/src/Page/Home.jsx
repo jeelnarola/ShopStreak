@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import banner1 from "../assets/sample-1.jpg";
 import subBanner1 from "../assets/sub-banner-1.jpg";
 import subBanner2 from "../assets/sub-banner-2.jpg";
@@ -18,6 +17,8 @@ import ScrollToTopButton from "../Components/ScrollToTopButton";
 import img4 from '../assets/4.jpg'
 
 import { FaInstagram } from "react-icons/fa";
+import CZservicecmsblock from "../Components/CZservicecmsblock";
+import Footer from "../Components/Footer";
 export default function Home() {
   const items = [
     { name: "Smart Tablet", image: subbanner },
@@ -393,121 +394,128 @@ export default function Home() {
 
       </div>
       <div className="  py-20 bg-black/10">
-      <div className="container mx-auto">
-        <h1 className="text-center text-3xl font-semibold mb-10">Follow Us on Instagram</h1>
-        <div className="grid grid-cols-6 gap-2">
+        <div className="container mx-auto">
+          <h1 className="text-center text-3xl font-semibold mb-10">Follow Us on Instagram</h1>
+          <div className="grid grid-cols-6 gap-2">
             <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-              <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-              <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-              <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-              <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
-            <div className="relative w-full h-[220px] overflow-hidden   ">
-              {/* Background Image */}
-              <img
-                src={img4}
-                alt="..."
-                className="w-[220px] h-[220px] object-cover  rounded-lg"
-              />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
-              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
-                <div className=" text-center p-3  
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
             
              hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
-                  <FaInstagram className="text-white text-5xl" />
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       </div>
+      <div className="container mx-auto my-20">
+        <CZservicecmsblock />
+      </div>
+      <div className="container mx-auto pb-20 border-b-2 border-gray-200">
+        <Footer />
+      </div>
+
       {/* {visible && ( */}
       <button className="...">
         <ScrollToTopButton />
