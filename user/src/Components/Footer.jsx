@@ -2,6 +2,9 @@ import React from 'react'
 import { BsChatSquare } from "react-icons/bs";
 function Footer() {
     return (
+        <div className="pb-20 border-b-2 mb-10 border-gray-200">
+            <div className="container mx-auto ">
+
         <div className='flex flex-col md:flex-row  items-start bg-white '>
             <div className='w-[570px] border-r-2 border-gray-200 pr-25 '>
                 <h2 className='text-xl font-bold pb-5'>Contact us</h2>
@@ -49,6 +52,8 @@ function Footer() {
                         
                     </p>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     )

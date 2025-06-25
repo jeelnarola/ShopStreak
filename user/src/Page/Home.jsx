@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className=" ">
-      <Topheader />
+     
       {/* <Header/> */}
       <div className="bg-[#f5f5f5f7] py-4">
         <div className="container mx-auto ">
@@ -511,9 +511,6 @@ export default function Home() {
       </div>
       <div className="container mx-auto my-20">
         <CZservicecmsblock />
-      </div>
-      <div className="container mx-auto pb-20 border-b-2 border-gray-200">
-        <Footer />
       </div>
 
       {/* {visible && ( */}
