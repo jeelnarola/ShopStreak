@@ -1,17 +1,24 @@
-import React from "react";
 import banner1 from "../assets/sample-1.jpg";
 import subBanner1 from "../assets/sub-banner-1.jpg";
 import subBanner2 from "../assets/sub-banner-2.jpg";
 import subbanner from "../assets/subBanner.jpg";
 import cms from "../assets/cms-banner-1.jpg";
-import cms4 from "../assets/cms-banner-4.jpg";
 
-import { FaTruckFast } from "react-icons/fa6";
+
+import { FaChevronUp, FaLink, FaTruckFast } from "react-icons/fa6";
 import Product from "../Components/Product";
 import Header from "../Components/Header";
 import Topheader from "../Components/Topheader";
 import offbanner from "../assets/offer-banner.jpg";
+import CZbannercmsblock from "../Components/CZbannercmsblock";
+import ClientSay from "../Components/ClientSay";
+import blog7 from '../assets/b-blog-7.jpg'
+import ScrollToTopButton from "../Components/ScrollToTopButton";
+import img4 from '../assets/4.jpg'
 
+import { FaInstagram } from "react-icons/fa";
+import CZservicecmsblock from "../Components/CZservicecmsblock";
+import Footer from "../Components/Footer";
 export default function Home() {
   const items = [
     { name: "Smart Tablet", image: subbanner },
@@ -231,53 +238,7 @@ export default function Home() {
         <Product name={["Latest Products"]} />
       </div>
       <div className="container mx-auto my-20">
-        <div class="grid grid-cols-2 gap-4 justify-center bg-white">
-          {/* <!-- Card 1 --> */}
-          <div class="flex items-center bg-blue-300 rounded-md w-full h-[350px] gap-4 relative overflow-hidden cursor-pointer group">
-            <img
-              src={cms4}
-              alt="Samsung S22"
-              class="w-full h-full object-cover hover:scale-115 transition-all duration-2000"
-            />
-            <div className="absolute top-10 left-10 text-black px-2 py-1 rounded-bl-md">
-              <p className="mt-10">Save Up To 20% Off</p>
-
-              <h3 class="font-semibold text-4xl mt-5">
-                Santa Lucia Three
-                <br />
-                Seater Sofa
-              </h3>
-              {/* <p class="text-red-500 font-bold">$250.00</p> */}
-              {/* <a href="#" class="text-sm underline font-medium text-black hover:text-blue-600">SHOP NOW</a> */}
-              <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
-                SHOP NOW
-              </button>
-            </div>
-          </div>
-
-          {/* <!-- Card 2 --> */}
-          <div class="flex items-center bg-blue-300 rounded-md w-full h-[350px] gap-4 relative overflow-hidden cursor-pointer group">
-            <img
-              src={cms4}
-              alt="Samsung S22"
-              class="w-full h-full object-cover hover:scale-115 transition-all duration-2000"
-            />
-            <div className="absolute top-10 left-10 text-black px-2 py-1 rounded-bl-md">
-              <p className="mt-10">Save Up To 20% Off</p>
-
-              <h3 class="font-semibold text-4xl mt-5">
-                Santa Lucia Three
-                <br />
-                Seater Sofa
-              </h3>
-              {/* <p class="text-red-500 font-bold">$250.00</p> */}
-              {/* <a href="#" class="text-sm underline font-medium text-black hover:text-blue-600">SHOP NOW</a> */}
-              <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
-                SHOP NOW
-              </button>
-            </div>
-          </div>
-        </div>
+        <CZbannercmsblock />
       </div>
       <div className="container mx-auto my-20">
         <Product name={["Featured Products"]} />
@@ -285,6 +246,281 @@ export default function Home() {
       <div className="container mx-auto my-20">
         <Product name={["Deal of the day"]} />
       </div>
+      <div className="container mx-auto my-20">
+        <CZbannercmsblock />
+      </div>
+      <div className="container mx-auto my-20">
+        <ClientSay />
+      </div>
+      <div className="container mx-auto my-20">
+        <div className="grid grid-cols-4 gap-3">
+          <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+            <div className="relative h-[250px] overflow-hidden   ">
+              {/* Background Image */}
+              <img
+                src={blog7}
+                alt="..."
+                className="w-full h-[250px] object-cover group-hover:scale-105 transition-all duration-300 rounded-lg"
+              />
+
+              {/* Black Overlay on Hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+
+              {/* Centered Icons */}
+              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaLink className="text-white" />
+                </div>
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaTruckFast className="text-white" />
+                </div>
+              </div>
+            </div>
+            <div className="py-5">
+              <p className="text-red-500 font-semibold pb-1">5 APRIL, 2023 </p>
+              <p className="text-black font-semibold text-lg">Nullam ullamcorper ornare molestie </p>
+              <p className="text-gray-500 pt-1 text-md ">Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam...</p>
+              <a className="text-red-500 font-semibold block mt-5">READ MORE</a>
+
+            </div>
+          </div>
+          <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+            <div className="relative h-[250px] overflow-hidden   ">
+              {/* Background Image */}
+              <img
+                src={blog7}
+                alt="..."
+                className="w-full h-[250px] object-cover group-hover:scale-105 transition-all duration-300 rounded-lg"
+              />
+
+              {/* Black Overlay on Hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+
+              {/* Centered Icons */}
+              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaLink className="text-white" />
+                </div>
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaTruckFast className="text-white" />
+                </div>
+              </div>
+            </div>
+            <div className="py-5">
+              <p className="text-red-500 font-semibold pb-1">5 APRIL, 2023 </p>
+              <p className="text-black font-semibold text-lg">Nullam ullamcorper ornare molestie </p>
+              <p className="text-gray-500 pt-1 text-md ">Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam...</p>
+              <a className="text-red-500 font-semibold block mt-5">READ MORE</a>
+
+            </div>
+          </div>
+          <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+            <div className="relative h-[250px] overflow-hidden   ">
+              {/* Background Image */}
+              <img
+                src={blog7}
+                alt="..."
+                className="w-full h-[250px] object-cover group-hover:scale-105 transition-all duration-300 rounded-lg"
+              />
+
+              {/* Black Overlay on Hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+
+              {/* Centered Icons */}
+              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaLink className="text-white" />
+                </div>
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaTruckFast className="text-white" />
+                </div>
+              </div>
+            </div>
+            <div className="py-5">
+              <p className="text-red-500 font-semibold pb-1">5 APRIL, 2023 </p>
+              <p className="text-black font-semibold text-lg">Nullam ullamcorper ornare molestie </p>
+              <p className="text-gray-500 pt-1 text-md ">Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam...</p>
+              <a className="text-red-500 font-semibold block mt-5">READ MORE</a>
+
+            </div>
+          </div>
+          <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+            <div className="relative h-[250px] overflow-hidden   ">
+              {/* Background Image */}
+              <img
+                src={blog7}
+                alt="..."
+                className="w-full h-[250px] object-cover group-hover:scale-105 transition-all duration-300 rounded-lg"
+              />
+
+              {/* Black Overlay on Hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+
+              {/* Centered Icons */}
+              <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaLink className="text-white" />
+                </div>
+                <div className="border-2 border-white text-center p-3 rounded-sm 
+             hover:bg-red-500 hover:border-transparent hover:text-white 
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                  <FaTruckFast className="text-white" />
+                </div>
+              </div>
+            </div>
+            <div className="py-5">
+              <p className="text-red-500 font-semibold pb-1">5 APRIL, 2023 </p>
+              <p className="text-black font-semibold text-lg">Nullam ullamcorper ornare molestie </p>
+              <p className="text-gray-500 pt-1 text-md ">Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam...</p>
+              <a className="text-red-500 font-semibold block mt-5">READ MORE</a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div className="  py-20 bg-black/10">
+        <div className="container mx-auto">
+          <h1 className="text-center text-3xl font-semibold mb-10">Follow Us on Instagram</h1>
+          <div className="grid grid-cols-6 gap-2">
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full group overflow-hidden cursor-pointer rounded-lg">
+              <div className="relative w-full h-[220px] overflow-hidden   ">
+                {/* Background Image */}
+                <img
+                  src={img4}
+                  alt="..."
+                  className="w-[220px] h-[220px] object-cover  rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10"></div>
+                <div className="absolute inset-0 flex justify-center items-center gap-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-1000">
+                  <div className=" text-center p-3  
+            
+             hover:font-semibold group transition-all duration-300 cursor-pointer scale-0 group-hover:scale-100">
+                    <FaInstagram className="text-white text-5xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div className="container mx-auto my-20">
+        <CZservicecmsblock />
+      </div>
+      <div className="container mx-auto pb-20 border-b-2 border-gray-200">
+        <Footer />
+      </div>
+
+      {/* {visible && ( */}
+      <button className="...">
+        <ScrollToTopButton />
+      </button>
+      {/* )} */}
     </div>
   );
 }
