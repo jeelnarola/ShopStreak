@@ -11,7 +11,7 @@ function Layout() {
        <Topheader />
       
       {/* Render nested routes here */}
-      <div className="p-4">
+      <div className="">
         <Outlet />
       </div>
       <Footer />

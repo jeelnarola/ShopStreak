@@ -19,9 +19,10 @@ function CWC() {
         </span>
       </div>
       <div className="relative inline-block">
-        <button className="flex items-center gap-1 text-gray-700 hover:text-gray-900 cursor-pointer" title='Whishist'>
+        <Link to="/wishlist" className="flex items-center gap-1 text-gray-700 hover:text-gray-900 cursor-pointer" title='Whishist'>
           <CiHeart className="text-4xl" />
-        </button>
+        
+        </Link>
         <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
           2
         </span>

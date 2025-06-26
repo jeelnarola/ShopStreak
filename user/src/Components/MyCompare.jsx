@@ -49,7 +49,7 @@ const MyCompare = () => {
                                             alt="product"
                                             className="h-40 object-contain mb-2"
                                         />
-                                        <MdDelete className='absolute text-xl right-8 cursor-pointer hover:text-red-500 transition-all duration-200'/>
+                                        <MdDelete className='absolute text-xl right-8 cursor-pointer hover:text-red-500 '/>
                                         <p className="text-gray-500 text-sm">{product.brand}</p>
                                         <p className="text-md mt-1 text-center">{product.title}</p>
                                         <p className="text-red-600 font-semibold">
