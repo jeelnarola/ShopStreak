@@ -5,6 +5,8 @@ import Layout from "./Roots/Layout";
 import CZleftbanner from "./Components/CZleftbanner";
 import MyWishlists from "./Components/MyWishlists.jsx";
 import MyCart from "./Components/MyCart.jsx";
+import PurchaseCartProce from "./Components/PurchaseCartProce.jsx";
+import ShopingCart from "./Components/ShopingCart.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +17,13 @@ function App() {
           <Route index element={<Home />} />
           <Route path="compare" element={<CZleftbanner />} />
           <Route path="wishlist" element={<MyWishlists />} />
-          <Route path="cart" element={<MyCart />} />
+          <Route path="cart" element={<MyCart />}>
+          {/* <Route index element={<ShopingCart/> */}
+            <Route index element={<ShopingCart />} />
+
+            <Route path="summary" element={<PurchaseCartProce />} />
+            {/* <Route path="checkout" element={<CartCheckout />} /> */}
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

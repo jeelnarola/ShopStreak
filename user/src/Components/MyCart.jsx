@@ -1,80 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import product from "../assets/product1.png";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
+import PurchaseCartProce from "./PurchaseCartProce";
+import { Link, Outlet, useLocation } from "react-router-dom";
 function MyCart() {
+  const location = useLocation();
+  const [show, setShow] = useState(true);
+  
   return (
     <div className="container mx-auto">
-      <div className="m-5 my-10">
-        <div className="w-[70%] border border-gray-300 rounded-md overflow-hidden">
-          <table className="w-full">
-            <thead>
-              <tr>
-                <td className="text-black p-3 border-b-[1px] border-gray-300">
-                  Shopping Cart
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="p-7 px-10 flex justify-between ">
-                  <img
-                    src={product}
-                    alt=".."
-                    className="border-[1px] border-gray-300 w-[100px] rounded-md"
-                  />
-                  <div>
-                    <ul>
-                      <li className="text-md font-medium pb-2">
-                        Cropped Satin Bomber Jacket
-                      </li>
-                      <li className="text-red-500 font-bold">$94.00</li>
-                      <li className="text-gray-700">
-                        <span className="text-md font-medium text-black pr-2">
-                          Size:
-                        </span>
-                        Small
-                      </li>
-                      <li className="text-gray-700">
-                        <span className="text-md font-medium text-black pr-2">
-                          Color:
-                        </span>
-                        Black
-                      </li>
-                    </ul>
-                    {/* <td></td>
-                    <td>$94.00</td>
-                    <td>Size: Small</td>
-                    <td>Color: Black</td> */}
-                  </div>
-                  <div className="flex">
-                    <input
-                      type="text"
-                      className="w-[20px] h-[45px] p-1 px-5 border-1 border-gray-300"
-                    />
-                    <div className="">
-                      <button className="block p-[2px] border-1 border-gray-300">
-                        <IoIosArrowUp />
-                      </button>
-                      <button className="p-[2px] border-1 border-gray-300">
-                        <IoIosArrowUp className="rotate-180" />
-                      </button>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xl text-red-600 font-semibold">$0.00</p>
-                  </div>
-                  <div>
-                    <MdDelete className="mx-6 cursor-pointer hover:text-red-500 text-2xl " />
-                  </div>
-                </td>
-              </tr>
-              {/* <tr></tr>  */}
-            </tbody>
-          </table>
+      <div className="m-5 my-10 flex gap-10">
+        <Outlet/>
+        
+
+        <div className="w-[30%] border border-gray-300 rounded-md overflow-hidden">
+          <div className="py-5 px-5 text-red-500 font-medium border-b-1 border-gray-300">
+            <div className="flex justify-between text-md pt-5">
+              <p className="text-black font-medium pb-2">1 item</p>
+              <p>$86.00</p>
+            </div>
+            <div className="flex justify-between text-md">
+              <p className="text-black font-medium">Shipping</p>
+              <p>$7.00</p>
+            </div>
+          </div>
+          <div className="py-5 px-5 text-red-500 font-medium ">
+            <div className="flex justify-between text-md">
+              <p className="text-black font-medium pb-2">Total (tax excl.)</p>
+              <p>$93.00</p>
+            </div>
+            <div className="flex justify-between text-md">
+              <p className="text-black font-medium pb-2">Total (tax incl.)</p>
+              <p>$93.00</p>
+
+            </div>
+            <div className="flex justify-between text-md">
+              <p className="text-black font-medium pb-2">Taxes:</p>
+              <p>$0.00</p>
+            </div>
+            <p className="font-normal underline cursor-pointer">Have a promo code?</p>
+            {
+             location.pathname === "/cart"  && (
+                <Link to={'summary'} className="uppercase block mx-auto bg-[#e72d23] text-white px-4 py-[6px] px-8 rounded hover:bg-[#000] focus:outline-none focus:ring-2 focus:ring-blue-300 uppercase mt-10 cursor-pointer text-lg">
+              <div className="flex items-center justify-center m-[10px]" onClick={()=>setShow(!show)}>
+                <div className="h-5 w-5 border-t-transparent border-solid animate-spin rounded-full border-white border-4">
+                </div>
+                <div class="ml-2">   proceed to checkout</div>
+              </div>
+                </Link>
+
+              )
+            }
+
+          </div>
         </div>
-        <p className="py-5 text-md font-medium">Continue shopping</p>
       </div>
+      
     </div>
   );
 }
