@@ -1,14 +1,13 @@
-
-import Topheader from './Components/Topheader'
-import Home from './Page/Home'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from './Roots/Layout';
-import CZleftbanner from './Components/CZleftbanner';
-import MyWishlists from './Components/MyWishlists.jsx';
+import Topheader from "./Components/Topheader";
+import Home from "./Page/Home";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import Layout from "./Roots/Layout";
+import CZleftbanner from "./Components/CZleftbanner";
+import MyWishlists from "./Components/MyWishlists.jsx";
+import MyCart from "./Components/MyCart.jsx";
 function App() {
-
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         {/* Parent Route with Layout */}
         <Route path="/" element={<Layout />}>
@@ -16,10 +15,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path="compare" element={<CZleftbanner />} />
           <Route path="wishlist" element={<MyWishlists />} />
+          <Route path="cart" element={<MyCart />} />
         </Route>
       </Routes>
-    </Router>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
