@@ -2,6 +2,7 @@ import React from 'react'
 import { RiMenu2Fill } from "react-icons/ri";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoRocketOutline } from "react-icons/io5";
+import HeaderMenu from './HeaderMenu';
 function Header() {
   return (
     <div className="container mx-auto flex justify-between items-center  h-[50px] px-4 lg:px-0 cursor-pointer">
@@ -18,16 +19,7 @@ function Header() {
           </div>
           <FaAngleDown className="text-sm" />
         </div>
-        <nav>
-          <ul className="flex items-center justify-center gap-4 text-gray-700 text-sm font-semibold text-2xl ml-10">
-            <li className="text-[16px] px-1 ">Home</li>
-            <li className="text-[16px] px-1">Fashion</li>
-            <li className="text-[16px] px-1">New Arrivals</li>
-            <li className="text-[16px] px-1">All brands</li>
-            <li className="text-[16px] px-1">Best deals</li>
-            <li className="text-[16px] px-1">Blog</li>
-          </ul>
-        </nav>
+        <HeaderMenu/>
       </div>
 
       {/* Right: Delivery Message */}
